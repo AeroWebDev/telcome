@@ -1212,3 +1212,18 @@ h3 {
     transform: translateY(0);
   }
 }
+
+.how-mini-list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.how-mini-list li {
+  margin-bottom: 6px;
+  color: var(--ink-dim);
+  font-size: 14.5px;
+}
+
+.how-mini-list li::marker {
+  color: var(--accent-2);
+}
