@@ -340,9 +340,21 @@ h3 {
 }
 
 @keyframes pulse-glow {
-  0% { transform: scale(0.95); opacity: 0.8; }
-  50% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 14px #22c55e; }
-  100% { transform: scale(0.95); opacity: 0.8; }
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+    box-shadow: 0 0 14px #22c55e;
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
 }
 
 .terminal-node {
@@ -836,6 +848,17 @@ h3 {
   color: var(--accent)
 }
 
+.pay-grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.pay-grid li i {
+  font-size: 20px;
+}
+
 /* ===========================
    Footer
 =========================== */
@@ -1145,7 +1168,7 @@ h3 {
     gap: 12px;
   }
 
-  .pillars > div {
+  .pillars>div {
     padding: 16px 14px;
   }
 
@@ -1160,7 +1183,8 @@ h3 {
 
   .form input,
   .form textarea {
-    font-size: 16px; /* Prevents auto-zoom on mobile iOS safari */
+    font-size: 16px;
+    /* Prevents auto-zoom on mobile iOS safari */
   }
 
   .pay-grid {
@@ -1207,11 +1231,16 @@ h3 {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+/* ===========================
+   "How it works" & Partnership
+=========================== */
 
 .how-mini-list {
   margin: 10px 0 0;
@@ -1226,4 +1255,29 @@ h3 {
 
 .how-mini-list li::marker {
   color: var(--accent-2);
+}
+
+.how-cards-2 {
+  align-items: stretch;
+}
+
+.how-cards-2 .card {
+  display: flex;
+}
+
+.how-card-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.how-card-note {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+@media (max-width: 900px) {
+  .how-cards-2 {
+    grid-template-columns: 1fr !important;
+  }
 }
